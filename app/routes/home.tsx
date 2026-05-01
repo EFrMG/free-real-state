@@ -1,6 +1,6 @@
 import type { Route } from "./+types/home";
 
-import SearchInput from "~/components/searchInput";
+import SearchInput from "~/components/homeSearchInput";
 
 export function meta({}: Route.MetaArgs) {
   return [

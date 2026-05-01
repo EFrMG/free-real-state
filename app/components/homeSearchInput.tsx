@@ -25,15 +25,15 @@ export default function SearchInput() {
 
   return (
     <div className="py-12 px-3">
-      <div className="*:px-6 *:py-2 *:text-lg *:border-2 *:border-amber-500 ">
+      <div className="*:px-6 *:py-2 *:text-lg *:border-2 *:border-amber-500 *:focus:outline-0">
         <button
-          className={`[border-right-style:none]! [border-bottom-style:none]! rounded-tl-lg ${searchQuery.type === "buy" ? "bg-amber-500 text-white" : ""}`}
+          className={`[border-right-style:none]! [border-bottom-style:none]! rounded-tl-lg ${searchQuery.type === "buy" ? "bg-amber-500 text-white" : "bg-amber-50"}`}
           onClick={() => updateQuery({ type: "buy" })}
         >
           Buy
         </button>
         <button
-          className={`[border-left-style:none]! [border-bottom-style:none]! rounded-tr-lg ${searchQuery.type === "rent" ? "bg-amber-500 text-white" : ""}`}
+          className={`[border-left-style:none]! [border-bottom-style:none]! rounded-tr-lg ${searchQuery.type === "rent" ? "bg-amber-500 text-white" : "bg-amber-50"}`}
           onClick={() => updateQuery({ type: "rent" })}
         >
           Rent

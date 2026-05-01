@@ -56,12 +56,7 @@
     line-height: var(--ff-base-lh);
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  :where(h1, h2, h3, h4, h5, h6) {
     text-wrap: balance;
     font-family: var(--ff-heading);
     line-height: var(--ff-heading-lh);
@@ -93,11 +88,7 @@
     border: none;
   }
 
-  p,
-  span,
-  li:not(.splide__slide),
-  dd,
-  figcaption {
+  :where(p, span, li:not(.splide__slide), dd, figcaption) {
     /* This one could cause issues */
     max-width: var(--body-max-width);
     text-wrap: pretty;

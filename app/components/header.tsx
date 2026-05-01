@@ -9,8 +9,8 @@ interface NavLinks {
 
 const headerLinks: NavLinks[] = [
   {
-    name: "Home",
-    key: "home",
+    name: "Properties",
+    key: "properties",
   },
   {
     name: "About",
@@ -41,9 +41,9 @@ export default function Header() {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   return (
-    <header className="max-sm:bg-amber-100 relative z-50 grid grid-cols-[40%_60%] sm:grid-cols-[60%_40%] max-w-7xl w-full mx-auto">
-      <div className="max-sm:bg-amber-100 bg-amber-50">
-        <div className="flex items-center gap-12 text-xl  px-2 py-4">
+    <header className="max-sm:bg-amber-100 relative z-50 grid grid-cols-[65%_35%] md:grid-cols-[60%_40%] max-w-7xl w-full mx-auto">
+      <div className="max-sm:bg-amber-100 bg-amber-50 z-1">
+        <div className="flex items-center gap-4 lg:gap-6 text-xl px-2 py-4">
           <a href="/" className="flex items-center gap-2 max-sm:ml-2">
             <GoHome size={38} />
             <span className="self-end max-sm:inline-block hidden lg:inline-block">
@@ -53,7 +53,7 @@ export default function Header() {
           <nav className="md:self-end max-sm:hidden">
             <ul className="flex gap-4 md:gap-6 text-base md:text-lg">
               {headerLinks.map((link: NavLinks) => (
-                <li key={`nav-link-${link.key}`}>
+                <li key={`nav-link-${link.key}`} className="text-nowrap">
                   <a href={`/${link.key}`}>{link.name}</a>
                 </li>
               ))}
@@ -64,7 +64,7 @@ export default function Header() {
 
       {/* Login buttons */}
       <div className="flex items-center justify-end sm:justify-around gap-4 md:gap-6 sm:bg-amber-100">
-        <div className="space-x-6">
+        <div className="space-x-2 md:space-x-6">
           {signingLinks.map((link: NavLinks) => (
             <a
               key={link.key}
