@@ -15,8 +15,12 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <main className="grid md:grid-cols-[60%_40%] z-5 max-w-7xl w-full grow mx-auto">
-      <div className="relative my-auto mr-[13.5%] pl-3">
+    <main
+      className="grid md:grid-cols-[60%_40%]
+      max-w-7xl w-full mx-auto max-sm:p-4 max-md:p-6
+      z-5 grow"
+    >
+      <div className="relative my-auto md:mr-[18.5%] md:pl-6">
         <h1 className="text-3xl sm:text-5xl md:text-4xl lg:text-5xl">
           Find the place of your dreams at unmatched discounts
         </h1>
@@ -54,7 +58,7 @@ export default function Home() {
           src="/app/assets/images/hero.webp"
           alt="Hero image"
           draggable={false}
-          className="absolute right-0 max-w-none w-[120%] h-[95%] object-contain"
+          className="absolute right-4 max-md:right-2 max-w-none w-[120%] h-[95%] object-contain"
         />
       </div>
     </main>
