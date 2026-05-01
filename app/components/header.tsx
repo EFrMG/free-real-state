@@ -27,8 +27,8 @@ const headerLinks: NavLinks[] = [
 
 const signingLinks: NavLinks[] = [
   {
-    name: "Sign in",
-    key: "sign-in",
+    name: "Log in",
+    key: "log-in",
   },
   {
     name: "Sign up",
@@ -46,11 +46,11 @@ export default function Header() {
           {" "}
           <a href="/" className="flex items-center gap-2">
             <GoHome size={38} />
-            <span className="max-xs:inline-block hidden lg:inline-block">
+            <span className="self-end max-xs:inline-block hidden lg:inline-block">
               FreeRealEstate
             </span>
           </a>
-          <nav className="max-sm:hidden">
+          <nav className="self-end max-sm:hidden">
             <ul className="flex gap-6 text-lg">
               {headerLinks.map((link: NavLinks) => (
                 <li key={`nav-link-${link.key}`}>
@@ -68,11 +68,8 @@ export default function Header() {
             <a
               key={link.key}
               href={`/${link.key}`}
-              className={
-                link.key === "sign-in"
-                  ? "px-4 py-2"
-                  : "bg-amber-300 rounded-lg px-4 py-2"
-              }
+              className={`px-4 py-2 text-lg 
+              ${link.key === "log-in" ? "" : "bg-amber-300 rounded-lg"}`}
             >
               {link.name}
             </a>

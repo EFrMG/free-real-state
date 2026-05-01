@@ -20,12 +20,12 @@ export default function Home() {
         <h1 className="text-5xl">
           Find the place of your dreams at unmatched discounts
         </h1>
-        <p className="py-12">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ut
-          mollitia magni libero repudiandae modi est! Debitis quia voluptates
-          aperiam doloribus, eveniet unde recusandae aut molestias facilis
-          temporibus omnis. Alias.
+        <p className="pt-12 text-lg">
+          Aquiring a place to live the joy of life should not be as expensive as
+          life is in the end. We provide the best places at a price that might
+          as well not be real.
         </p>
+        <p className="py-6 text-xl">Get your deal today!</p>
 
         <SearchInput />
 
@@ -51,10 +51,10 @@ export default function Home() {
         w-full h-full md:flex items-center md:bg-amber-100 -z-1"
       >
         <img
-          src="https://picsum.photos/1080/1920"
+          src="/app/assets/images/hero.webp"
           alt="Hero image"
           draggable={false}
-          className="absolute right-0 max-w-none w-[120%] h-[80%] object-cover"
+          className="absolute right-0 max-w-none w-[120%] h-[95%] object-contain"
         />
       </div>
     </main>
