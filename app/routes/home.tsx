@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main className="grid md:grid-cols-[60%_40%] z-5 max-w-7xl w-full grow mx-auto">
       <div className="relative my-auto mr-[13.5%] pl-3">
-        <h1 className="text-5xl">
+        <h1 className="text-3xl sm:text-5xl md:text-4xl lg:text-5xl">
           Find the place of your dreams at unmatched discounts
         </h1>
         <p className="pt-12 text-lg">
@@ -29,7 +29,7 @@ export default function Home() {
 
         <SearchInput />
 
-        <div className="flex gap-8">
+        <div className="flex justify-center gap-8 max-sm:flex-wrap py-6">
           <hgroup>
             <span className="block font-bold text-center text-2xl">38</span>
             <h2 className="text-xl text-center">Awarded Industry Prices</h2>

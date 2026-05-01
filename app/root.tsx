@@ -12,7 +12,13 @@ import "./app.css";
 
 import Header from "~/components/header";
 
-export const links: Route.LinksFunction = () => [];
+export const links: Route.LinksFunction = () => [
+  {
+    rel: "icon",
+    type: "image/svg",
+    href: "/favicon.svg",
+  },
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
