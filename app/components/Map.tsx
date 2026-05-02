@@ -1,9 +1,16 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-export default function Map() {
+interface MapProps {
+  marginTop: number;
+  viewportHeight: number;
+}
+
+export default function Map({ marginTop, viewportHeight }: MapProps) {
   return (
-    <div className="sticky top-[5vh] h-[90vh] w-[95%] mt-24 mx-auto">
+    <div
+      className={`sticky top-[7.5vh] h-[${viewportHeight}vh] w-[95%] mt-${marginTop} mx-auto`}
+    >
       <MapContainer
         center={[51.505, -0.09]}
         zoom={13}

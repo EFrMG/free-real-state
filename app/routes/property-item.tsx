@@ -107,14 +107,14 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
       <div className="md:bg-amber-100">
         <Suspense
           fallback={
-            <div className="sticky top-[5vh] h-[90vh] w-[95%] mt-24 mx-auto rounded-lg bg-slate-400/36 animate-pulse">
+            <div className="sticky top-[7.5vh] h-[75vh] w-[95%] mt-12 mx-auto rounded-lg bg-slate-400/36 animate-pulse">
               <p className="block w-fit mx-auto pt-12 text-xl text-gray-100">
                 Loading Map...
               </p>
             </div>
           }
         >
-          <Map />
+          <Map marginTop={12} viewportHeight={75} />
         </Suspense>
       </div>
     </main>
