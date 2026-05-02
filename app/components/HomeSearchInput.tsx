@@ -17,7 +17,7 @@ export default function HomeSearchInput() {
   });
 
   const updateQuery = (updates: Partial<Query>) => {
-    setSearchQuery((prev) => ({
+    setSearchQuery((prev: Query) => ({
       ...prev,
       ...updates,
     }));
@@ -39,7 +39,7 @@ export default function HomeSearchInput() {
           Rent
         </button>
       </div>
-      <form className="flex max-sm:flex-wrap rounded-lg shadow-2xl shadow-amber-100/94 *:max-sm:w-[80%] *:min-h-16 *:pl-2 *:border-2 *:border-amber-500">
+      <form className="flex max-sm:flex-wrap rounded-lg shadow-2xl shadow-slate-200/82 *:max-sm:w-[80%] *:min-h-16 *:pl-2 *:border-2 *:border-amber-500">
         <input
           type="text"
           name="location"

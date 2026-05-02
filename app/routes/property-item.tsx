@@ -25,5 +25,58 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function PropertyItem({ loaderData }: Route.ComponentProps) {
-  return <div>PROPERTY ITEM</div>;
+  const {
+    title,
+    description,
+    img,
+    bedrooms,
+    bathrooms,
+    price,
+    address,
+    latitude,
+    longitude,
+  } = loaderData;
+
+  return (
+    <main className="gen-main">
+      <div className="p-4">
+        <h1 className="my-6 text-center font-bold text-3xl text-amber-900">
+          {title}
+        </h1>
+        <img
+          src={img}
+          alt={title}
+          className="property-img-outline w-full max-h-84 mb-12 shadow-lg rounded-lg"
+        />
+
+        <div className="grid md:grid-cols-[2fr_1fr] gap-8">
+          <p className="text-lg text-gray-700">{description}</p>
+          <div className="h-fit p-4 bg-amber-100/18 rounded-lg shadow-md inset-shadow-xs">
+            <h2 className="mb-4 text-center font-semibold text-xl">Details</h2>
+            <div className="[&_p]:py-2 [&_p]:flex [&_p]:justify-between [&>p]:border-b [&>p]:border-amber-300/74">
+              <p>
+                <span>Price:</span> <span>${price}</span>
+              </p>
+              <p>
+                <span>Address: {address}</span>
+              </p>
+              <p>
+                <span>Bedrooms:</span> <span>{bedrooms}</span>
+              </p>
+              <p>
+                <span>Bathrooms:</span> <span>{bathrooms}</span>
+              </p>
+              <div className="mt-4">
+                <p className="text-sm text-gray-600">
+                  Coordinates: {latitude}, {longitude}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="md:bg-amber-100">MAP</div>
+    </main>
+  );
 }

@@ -24,6 +24,7 @@ export default function LogIn() {
         {propertyData.map((property) => (
           <PropertyCard
             key={`property-card-${property.id}`}
+            id={property.id}
             title={property.title}
             description={property.description}
             img={property.img}

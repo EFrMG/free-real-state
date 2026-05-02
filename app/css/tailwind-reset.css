@@ -8,6 +8,10 @@
     background-repeat: no-repeat;
   }
 
+  :focus-visible {
+    outline: none;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *,
     ::before,

@@ -51,6 +51,10 @@
   }
 
   .filter-input-group {
-    @apply stack-0 justify-around px-1 rounded-lg shadow-lg shadow-amber-100/48 border-2 border-amber-500;
+    @apply stack-0 justify-around px-1 rounded-lg shadow-md shadow-slate-100 border-2 border-amber-500;
+  }
+
+  .property-img-outline {
+    @apply outline-2 outline-slate-500/12;
   }
 }
