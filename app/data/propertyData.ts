@@ -45,7 +45,7 @@ export const propertyData: PropertyData[] = [
       "A trendy loft in the heart of Palermo Soho, surrounded by the best boutiques and restaurants in the city. Features high ceilings and a private balcony.",
     longDescription:
       "This stunning loft in Palermo Soho offers a unique living experience in one of Buenos Aires' most vibrant neighborhoods. The open-plan design features double-height ceilings, exposed brick walls, and large windows that flood the space with natural light. The kitchen is fully equipped with modern appliances, and the mezzanine bedroom provides a cozy retreat. Located just steps away from Plaza Serrano, you'll have the city's best cafes, bars, and designer shops right at your doorstep.",
-    exteriorImage: "https://picsum.photos/seed/prop1/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_013.webp",
     interiorGallery: [
       "https://picsum.photos/seed/prop1-1/1080/1920",
       "https://picsum.photos/seed/prop1-2/1080/1920",
@@ -75,7 +75,7 @@ export const propertyData: PropertyData[] = [
       "Spacious apartment perfect for students or young professionals. Located just steps away from Sarmiento Park and the university campus.",
     longDescription:
       "This bright and modern apartment is located in the heart of Nueva Córdoba, the most sought-after neighborhood for students and young professionals. Featuring two comfortable bedrooms, a spacious living area, and a fully equipped kitchen, it's perfect for those who want to be close to the university and the vibrant nightlife of the city. The building offers 24/7 security and a communal laundry room.",
-    exteriorImage: "https://picsum.photos/seed/prop2/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_019.webp",
     bedrooms: 2,
     bathrooms: 2,
     price: 850,
@@ -98,7 +98,7 @@ export const propertyData: PropertyData[] = [
       "Charming studio with an incredible view of the Paraná River. Modern finishes and located in the coolest neighborhood of Rosario.",
     longDescription:
       "Located in the trendy Pichincha neighborhood, this studio apartment offers breathtaking views of the Paraná River and the Rosario skyline. The space is efficiently designed with high-quality finishes, a modern kitchenette, and a private balcony. Perfect for a single professional or a couple looking to enjoy the best of Rosario's gastronomy and culture.",
-    exteriorImage: "https://picsum.photos/seed/prop3/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_012.webp",
     bedrooms: 1,
     bathrooms: 1,
     price: 600,
@@ -116,7 +116,7 @@ export const propertyData: PropertyData[] = [
       "Experience the wine country in style. This luxury villa features a private vineyard, swimming pool, and breathtaking views of the Andes.",
     longDescription:
       "Nestled in the heart of Chacras de Coria, Mendoza, this magnificent villa offers the ultimate luxury experience. The property features its own small Malbec vineyard, a large infinity pool overlooking the Andes mountains, and five spacious en-suite bedrooms. The interior is a blend of traditional rustic charm and modern sophistication, with a professional-grade kitchen and a private wine cellar. An ideal retreat for wine lovers and those seeking tranquility.",
-    exteriorImage: "https://picsum.photos/seed/prop4/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_006.webp",
     bedrooms: 5,
     bathrooms: 4,
     price: 1250000,
@@ -139,7 +139,7 @@ export const propertyData: PropertyData[] = [
       "Cozy wooden cabin with direct access to Lake Nahuel Huapi. Perfect for winter skiing or summer hiking adventures.",
     longDescription:
       "This authentic Patagonian cabin is built with local cypress wood and stone, offering a warm and inviting atmosphere. Located right on the shores of Lake Nahuel Huapi, it provides stunning water views from every room. With a large stone fireplace, three cozy bedrooms, and a private deck, it's the perfect base for exploring the surrounding mountains or simply relaxing by the lake. Just a short drive from Cerro Catedral ski resort.",
-    exteriorImage: "https://picsum.photos/seed/prop5/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_004.webp",
     bedrooms: 3,
     bathrooms: 2,
     price: 1500,
@@ -163,7 +163,7 @@ export const propertyData: PropertyData[] = [
       "Traditional colonial-style home in the peaceful hills of Salta. Features a large garden and a clay oven for authentic empanadas.",
     longDescription:
       "This beautiful estate captures the essence of Northern Argentina's colonial architecture. Set on a sprawling acre of lush gardens in San Lorenzo, the house features thick adobe walls, hand-painted tiles, and a wide gallery perfect for siestas. The property includes a large swimming pool, a traditional clay oven (horno de barro), and a guest cottage. Experience the peace and tradition of the Salteño hills in this unique home.",
-    exteriorImage: "https://picsum.photos/seed/prop6/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_003.webp",
     bedrooms: 4,
     bathrooms: 3,
     price: 380000,
@@ -184,7 +184,7 @@ export const propertyData: PropertyData[] = [
     title: "Classic Mansion in Los Troncos",
     description:
       "Exclusive residence in the most prestigious neighborhood of Mar del Plata. Elegant architecture with high-end details and a beautiful garden.",
-    exteriorImage: "https://picsum.photos/seed/prop7/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_028.webp",
     bedrooms: 5,
     bathrooms: 4,
     price: 650000,
@@ -208,7 +208,7 @@ export const propertyData: PropertyData[] = [
       "Cozy apartment at the end of the world. Enjoy stunning views of the Beagle Channel and easy access to the Martial Glacier.",
     longDescription:
       "Experience life in Ushuaia from this modern and well-heated apartment. The large living room windows offer an unobstructed view of the Beagle Channel and the surrounding snow-capped peaks. Featuring two bedrooms, a modern bathroom, and a fully equipped kitchen, it's an ideal base for adventurers looking to explore Tierra del Fuego National Park or take a boat trip to see the penguins. High-speed internet included, perfect for digital nomads.",
-    exteriorImage: "https://picsum.photos/seed/prop8/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_011.webp",
     bedrooms: 2,
     bathrooms: 1,
     price: 1100,
@@ -232,7 +232,7 @@ export const propertyData: PropertyData[] = [
       "The pinnacle of luxury in Buenos Aires. Ultra-modern penthouse with 360-degree views of the city and the river.",
     longDescription:
       "This exclusive penthouse occupies the top two floors of one of Puerto Madero's most iconic towers. Featuring floor-to-ceiling windows, private elevator access, and a massive terrace with a private plunge pool, it offers the best views in the city. The interior design is minimalist and sophisticated, utilizing the finest materials like Carrara marble and smoked glass. Residents have access to the building's world-class amenities, including a spa, gym, and 24-hour concierge.",
-    exteriorImage: "https://picsum.photos/seed/prop9/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_010.webp",
     bedrooms: 3,
     bathrooms: 4,
     price: 2100000,
@@ -256,7 +256,7 @@ export const propertyData: PropertyData[] = [
       "Classic family home in the traditional northern suburbs. Features a huge swimming pool and ancient trees.",
     longDescription:
       "Located in the heart of San Isidro, this traditional English-style house is the perfect family home. The property is set on a 1500sqm lot with a lush garden, century-old trees, and a large swimming pool. Inside, you'll find a grand living room with a fireplace, a formal dining room, and four spacious bedrooms upstairs. The neighborhood is quiet and residential, yet close to the train station and the best schools in the area.",
-    exteriorImage: "https://picsum.photos/seed/prop10/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_014.webp",
     bedrooms: 4,
     bathrooms: 3,
     price: 890000,
@@ -280,7 +280,7 @@ export const propertyData: PropertyData[] = [
       "Charming Bavarian-style chalet in the hills of Córdoba. Perfect for a family getaway or a peaceful retreat.",
     longDescription:
       "Experience the European charm of Villa General Belgrano in this beautiful alpine chalet. Built with traditional wood and stone, the house features a cozy interior with a wood-burning stove and large windows overlooking the Sierras de Córdoba. The property includes a private garden with a barbecue area and access to a shared swimming pool. Located just a short walk from the town center, where you can enjoy local craft beer and traditional German pastries.",
-    exteriorImage: "https://picsum.photos/seed/prop11/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_029.webp",
     bedrooms: 3,
     bathrooms: 2,
     price: 950,
@@ -304,7 +304,7 @@ export const propertyData: PropertyData[] = [
       "Stay in the heart of the Quebrada de Humahuaca. Traditional adobe construction with modern comforts and stunning mountain views.",
     longDescription:
       "This unique property in Purmamarca offers an authentic experience in the Argentine Northwest. Built using traditional adobe and cactus wood, it harmonizes perfectly with the surrounding Seven-Colored Hill. The rooms are decorated with local handicrafts and offer all modern amenities. Guests can enjoy a traditional breakfast on the patio while taking in the breathtaking colors of the mountains. A magical place where time seems to stand still.",
-    exteriorImage: "https://picsum.photos/seed/prop12/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_026.webp",
     bedrooms: 1,
     bathrooms: 1,
     price: 750,
@@ -327,7 +327,7 @@ export const propertyData: PropertyData[] = [
       "Contemporary architecture meets Patagonian wilderness. Eco-friendly home with views of Lake Argentino.",
     longDescription:
       "Designed by an award-winning architect, this home in El Calafate is a masterpiece of sustainable design. The structure is built into the hillside to minimize environmental impact and maximize thermal efficiency. Large triple-pane windows offer panoramic views of Lake Argentino and the surrounding glaciers. The interior features polished concrete floors, recycled wood details, and state-of-the-art heating. A truly unique home for those who value modern design and nature.",
-    exteriorImage: "https://picsum.photos/seed/prop13/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_027.webp",
     bedrooms: 2,
     bathrooms: 2,
     price: 520000,
@@ -346,7 +346,7 @@ export const propertyData: PropertyData[] = [
       "Escape to the islands. Charming riverfront house accessible only by boat, surrounded by lush vegetation.",
     longDescription:
       "Discover the unique lifestyle of the Paraná Delta in this charming stilt house. Located on a private island, the property offers complete privacy and a direct connection with nature. The house features a large deck overlooking the river, a private pier, and a garden filled with native plants. Perfect for those who enjoy kayaking, birdwatching, or simply relaxing to the sound of the water. Boat taxi service available from Tigre station.",
-    exteriorImage: "https://picsum.photos/seed/prop14/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_022.webp",
     bedrooms: 2,
     bathrooms: 1,
     price: 800,
@@ -370,7 +370,7 @@ export const propertyData: PropertyData[] = [
       "Modern family home in the most exclusive gated community of Tucumán. Security, nature, and comfort.",
     longDescription:
       "This contemporary home is located in a prestigious country club at the foot of the San Javier hills in Yerba Buena. The house features an open-concept living area that flows seamlessly into a large gallery with a barbecue (parrilla). With four bedrooms, a private pool, and views of the surrounding green hills, it's the ideal place for a family looking for security and a high quality of life. The community offers golf, tennis, and 24-hour security.",
-    exteriorImage: "https://picsum.photos/seed/prop15/1080/1920",
+    exteriorImage: "/app/assets/images/properties/exterior/property_021.webp",
     bedrooms: 4,
     bathrooms: 3,
     price: 450000,
