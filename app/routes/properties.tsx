@@ -19,7 +19,7 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function LogIn() {
+export default function Properties() {
   const mapFallback = (
     <div className="sticky top-[7.5vh] h-[85vh] w-[95%] mt-24 mx-auto rounded-lg bg-slate-400/36 animate-pulse">
       <p className="block w-fit mx-auto pt-12 text-xl text-gray-100">
@@ -29,11 +29,21 @@ export default function LogIn() {
   );
 
   const mapPopovers = propertyData.map(
-    ({ title, img, bedrooms, bathrooms, address, latitude, longitude }) => ({
+    ({
       title,
       img,
       bedrooms,
       bathrooms,
+      city,
+      address,
+      latitude,
+      longitude,
+    }) => ({
+      title,
+      img,
+      bedrooms,
+      bathrooms,
+      city,
       address,
       latitude,
       longitude,
@@ -48,14 +58,7 @@ export default function LogIn() {
         {propertyData.map((property) => (
           <PropertyCard
             key={`property-card-${property.id}`}
-            id={property.id}
-            title={property.title}
-            description={property.description}
-            img={property.img}
-            bedrooms={property.bedrooms}
-            bathrooms={property.bathrooms}
-            price={property.price}
-            address={property.address}
+            property={property}
           />
         ))}
       </div>

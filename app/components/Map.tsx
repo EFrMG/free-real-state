@@ -7,6 +7,7 @@ interface MapPopover {
   img: string;
   bedrooms: number;
   bathrooms: number;
+  city: string;
   address: string;
   latitude: number;
   longitude: number;
@@ -44,7 +45,16 @@ export default function Map({
 
         {mapPopovers.map(
           (
-            { title, img, bedrooms, bathrooms, address, latitude, longitude },
+            {
+              title,
+              img,
+              bedrooms,
+              bathrooms,
+              city,
+              address,
+              latitude,
+              longitude,
+            },
             idx,
           ) => (
             <Marker
@@ -61,10 +71,12 @@ export default function Map({
                       src={img}
                       alt="Property popover image"
                       draggable={false}
-                      className="w-full h-full object-cover rounded-lg"
+                      className="place-self-center w-full h-[calc(max(var(--spacing)*32,100%)-10%)] object-cover rounded-lg"
                     />
                     <div className="stack-0 justify-around items-center text-sm text-gray-600 [&_p]:flex [&_p]:gap-2 [&_p]:my-2!">
-                      <p>{address}</p>
+                      <p>
+                        {city}, {address}
+                      </p>
                       <div className="flex gap-4 text-gray-500">
                         <p>
                           <LuBed size={18} /> <b>{bedrooms}</b>

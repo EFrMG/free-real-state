@@ -1,6 +1,7 @@
 import type { Route } from "./+types/property-item";
-
 import { lazy, Suspense } from "react";
+import ClientOnly from "~/components/ClientOnly";
+
 import { propertyData, userData } from "~/data/propertyData";
 import {
   GoBookmark,
@@ -8,7 +9,6 @@ import {
   GoCommentDiscussion,
   GoLocation,
 } from "react-icons/go";
-import ClientOnly from "~/components/ClientOnly";
 
 const Map = lazy(() => import("~/components/Map"));
 
@@ -21,7 +21,9 @@ export async function clientLoader({ params }: Route.ClientLoaderArgs) {
     throw new Response("Property Not Found", { status: 404 });
   }
 
-  return property;
+  const userPoster = userData.find((el) => el.id === property.userId);
+
+  return { property, userPoster };
 }
 
 export function meta({}: Route.MetaArgs) {
@@ -36,17 +38,23 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function PropertyItem({ loaderData }: Route.ComponentProps) {
+  const { property, userPoster } = loaderData;
   const {
     title,
     description,
+    longDescription,
     img,
+    sizes,
     bedrooms,
     bathrooms,
+    nearbyPlaces,
     price,
+    province,
+    city,
     address,
     latitude,
     longitude,
-  } = loaderData;
+  } = property;
 
   const mapFallback = (
     <div className="sticky top-[7.5vh] h-[35vh] w-[95%] mt-12 mx-auto rounded-lg bg-slate-400/36 animate-pulse">
@@ -62,6 +70,7 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
       img,
       bedrooms,
       bathrooms,
+      city,
       address,
       latitude,
       longitude,
@@ -75,7 +84,7 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
           src={img}
           alt={title}
           draggable="false"
-          className="property-img-outline w-full h-84 mt-8 shadow-lg rounded-lg"
+          className="property-img-outline w-full h-[35vh] mt-8 shadow-lg rounded-lg"
         />
 
         <h1 className="my-6 text-center font-bold text-3xl text-amber-900">
@@ -88,13 +97,43 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
               <GoLocation size={24} color="var(--color-amber-700)" />
               <span className="text-gray-700">Address: {address}</span>
             </p>
-            <p className="text-lg text-gray-700">{description}</p>
+            <p className="text-lg text-gray-700">
+              {longDescription || description}
+            </p>
 
-            <div className="flex justify-between">
-              <div>USER DATA OR CONTACT US</div>
+            <div className="flex justify-between items-center">
+              {userPoster ? (
+                <div
+                  className="flex items-center gap-4 pl-2 py-2 pr-3
+                  bg-amber-100/24 shadow-md rounded-lg border border-amber-200"
+                >
+                  <img
+                    src={userPoster.img}
+                    alt={userPoster.name}
+                    className="w-14 h-14 rounded-full object-cover"
+                  />
+                  <div>
+                    <div className="stack-2 justify-between">
+                      <p className="font-semibold text-amber-900">
+                        {userPoster.name}
+                      </p>
+                      <p className="text-xs text-end italic text-amber-700">
+                        Property Owner
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="pt-4 px-4 pr-6 text-gray-500 italic">
+                  Please, contact our agents for more information.
+                </div>
+              )}
 
-              <div className="w-fit [&_button]:rounded-sm [&_button]:shadow-md">
-                <button className="mr-4">
+              <div className="flex gap-4 w-fit [&_button]:rounded-sm [&_button]:shadow-md">
+                <button
+                  className="bg-amber-100/24 border border-amber-200 cursor-pointer
+                  hover:scale-110 transition-transform duration-150"
+                >
                   <GoCommentDiscussion
                     size={28}
                     color="var(--color-amber-500)"
@@ -103,7 +142,10 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
                 </button>
 
                 {true ? (
-                  <button>
+                  <button
+                    className="bg-amber-100/24 border border-amber-200 cursor-pointer
+                    hover:scale-110 transition-transform duration-150"
+                  >
                     <GoBookmark
                       size={28}
                       color="var(--color-amber-500)"
@@ -111,7 +153,10 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
                     />
                   </button>
                 ) : (
-                  <button>
+                  <button
+                    className="bg-amber-100/24 border border-amber-200 cursor-pointer
+                      hover:scale-110 transition-transform duration-150"
+                  >
                     <GoBookmarkSlash
                       size={28}
                       color="var(--color-amber-500)"
@@ -123,7 +168,7 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
             </div>
           </div>
 
-          <div className="h-fit p-4 bg-amber-100/18 rounded-lg shadow-md inset-shadow-xs">
+          <div className="h-fit p-4 bg-amber-100/24 rounded-lg shadow-md inset-shadow-xs">
             <h3 className="mb-4 text-center font-semibold text-xl">Details</h3>
             <div className="[&_p]:py-2 [&_p]:flex [&_p]:justify-between [&>p]:border-b [&>p]:border-amber-300/74">
               <p>
@@ -146,34 +191,12 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
         </div>
       </div>
 
-      <div className="md:bg-amber-100">
-        <div className="mt-12 mx-6 mb-4">
-          <h3 className="mb-2 text-xl font-bold">General:</h3>
-          <p className="inline-block w-full p-4 rounded-lg bg-amber-50">
-            {null}
-          </p>
-        </div>
-        <div className="mt-12 mx-6 mb-4">
-          <h3 className="mb-2 text-xl font-bold">Room Sizes:</h3>
-          <p className="inline-block w-full p-4 rounded-lg bg-amber-50">
-            {null}
-          </p>
-        </div>
-        <div className="mt-12 mx-6 mb-4">
-          <h3 className="mb-2 text-xl font-bold">Nearby Places:</h3>
-          <p className="inline-block w-full p-4 rounded-lg bg-amber-50">
-            {null}
-          </p>
-        </div>
-
-        <div className="mt-12 mx-6 mb-4">
-          <h3 className="text-xl font-bold">Location:</h3>
-        </div>
+      <div className="md:bg-amber-100 pb-8">
         <ClientOnly>
           {() => (
             <Suspense fallback={mapFallback}>
               <Map
-                marginTop={8}
+                marginTop={12}
                 viewportHeight={35}
                 zoomLevel={9}
                 scrollable={true}
@@ -182,6 +205,48 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
             </Suspense>
           )}
         </ClientOnly>
+
+        <div className="relative z-10 bg-amber-100">
+          <div className="mt-10 mx-6 mb-4 pt-2">
+            <h3 className="text-xl font-bold">Location:</h3>
+          </div>
+
+          <div className="flex justify-between items-center mx-6 p-3 bg-amber-50/66 rounded-lg border border-amber-200">
+            <span className="text-amber-800">{city}</span>
+            <span className="text-amber-600 text-xl">{province}</span>
+          </div>
+          {sizes && sizes.length > 0 && (
+            <div className="mt-12 mx-6 mb-4">
+              <h3 className="mb-2 text-xl font-bold">Room Sizes:</h3>
+              <div className="flex gap-4 flex-wrap">
+                {sizes.map((size, idx) => (
+                  <span
+                    key={idx}
+                    className="px-4 py-2 bg-amber-50/66 rounded-md border border-amber-200 text-amber-900"
+                  >
+                    Room {idx + 1}: {size} sqft
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+          {nearbyPlaces && Object.keys(nearbyPlaces).length > 0 && (
+            <div className="mt-12 mx-6 mb-4">
+              <h3 className="mb-2 text-xl font-bold">Nearby Places:</h3>
+              <div className="flex flex-wrap gap-4">
+                {Object.entries(nearbyPlaces).map(([place, distance]) => (
+                  <div
+                    key={place}
+                    className="p-3 bg-amber-50/66 rounded-lg border border-amber-200 flex justify-between items-center gap-2"
+                  >
+                    <span className="capitalize text-amber-800">{place}</span>
+                    <span className="font-mono text-amber-600">{distance}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </main>
   );

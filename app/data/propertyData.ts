@@ -30,7 +30,7 @@ export const propertyData: PropertyData[] = [
     id: 1,
     userId: 1,
     type: "rent",
-    title: "Modern Loft in Palermo Soho",
+    title: "Modern Loft",
     description:
       "A trendy loft in the heart of Palermo Soho, surrounded by the best boutiques and restaurants in the city. Features high ceilings and a private balcony.",
     longDescription:
@@ -47,7 +47,7 @@ export const propertyData: PropertyData[] = [
     price: 1200,
     province: "Buenos Aires",
     city: "Buenos Aires (capital)",
-    address: "Thames 1234, Palermo, Buenos Aires",
+    address: "Thames 1234 (Palermo Soho)",
     nearbyPlaces: {
       school: "400m",
       bus: "200m",
@@ -59,7 +59,7 @@ export const propertyData: PropertyData[] = [
   {
     id: 2,
     type: "rent",
-    title: "Elegant Apartment in Nueva Córdoba",
+    title: "Elegant Apartment",
     description:
       "Spacious apartment perfect for students or young professionals. Located just steps away from Sarmiento Park and the university campus.",
     img: "https://picsum.photos/1080/1920",
@@ -68,7 +68,7 @@ export const propertyData: PropertyData[] = [
     price: 900,
     province: "Córdoba",
     city: "Córdoba (capital)",
-    address: "Estrada 456, Nueva Córdoba",
+    address: "Estrada 456 (Nueva Córdoba)",
     latitude: -31.43,
     longitude: -64.188,
   },
@@ -91,7 +91,7 @@ export const propertyData: PropertyData[] = [
   {
     id: 4,
     type: "rent",
-    title: "Luxury Villa in Chacras de Coria",
+    title: "Luxury Villa",
     description:
       "Experience the wine country in style. This luxury villa features a private vineyard, swimming pool, and breathtaking views of the Andes.",
     img: "https://picsum.photos/1080/1920",
@@ -116,14 +116,14 @@ export const propertyData: PropertyData[] = [
     price: 1800,
     province: "Rio Negro",
     city: "San Carlos de Bariloche",
-    address: "Bustillo Km 7, Playa Bonita",
+    address: "Bustillo Km 7 (Playa Bonita)",
     latitude: -41.12,
     longitude: -71.4,
   },
   {
     id: 6,
     type: "rent",
-    title: "Colonial House in San Lorenzo",
+    title: "Colonial House",
     description:
       "Traditional colonial-style home in the peaceful hills of San Lorenzo. Features a large garden and a clay oven for authentic empanadas.",
     img: "https://picsum.photos/1080/1920",
@@ -139,7 +139,7 @@ export const propertyData: PropertyData[] = [
   {
     id: 7,
     type: "rent",
-    title: "Classic Mansion in Los Troncos",
+    title: "Classic Mansion",
     description:
       "Exclusive residence in the most prestigious neighborhood of Mar del Plata. Elegant architecture with high-end details and a beautiful garden.",
     img: "https://picsum.photos/1080/1920",
@@ -148,7 +148,7 @@ export const propertyData: PropertyData[] = [
     price: 3000,
     province: "Buenos Aires",
     city: "Mar del Plata",
-    address: "Viamonte 2345, Los Troncos",
+    address: "Viamonte 2345 (Los Troncos)",
     latitude: -38.02,
     longitude: -57.54,
   },

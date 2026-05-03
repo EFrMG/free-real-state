@@ -3,25 +3,33 @@ import { GoLocation } from "react-icons/go";
 import { LuBed, LuBath } from "react-icons/lu";
 
 interface PropertyCardProps {
-  id: number;
-  title: string;
-  description: string;
-  img: string;
-  bedrooms: number;
-  bathrooms: number;
-  price: number;
-  address: string;
+  property: {
+    id: number;
+    title: string;
+    description: string;
+    img: string;
+    province: string;
+    city: string;
+    address: string;
+    bedrooms: number;
+    bathrooms: number;
+    price: number;
+  };
 }
 
 export default function PropertyCard({
-  id,
-  title,
-  description,
-  img,
-  bedrooms,
-  bathrooms,
-  price,
-  address,
+  property: {
+    id,
+    title,
+    description,
+    img,
+    province,
+    city,
+    address,
+    bedrooms,
+    bathrooms,
+    price,
+  },
 }: PropertyCardProps) {
   return (
     <Link
@@ -41,14 +49,18 @@ export default function PropertyCard({
 
         <div className="stack-2">
           <h2
-            className="text-xl font-bold text-amber-900
+            className="text-xl text-center font-bold text-amber-900
             group-hover:text-amber-700 transition-colors duration-425"
           >
             {title}
           </h2>
           <div className="flex items-center gap-[0.5ex]">
-            <GoLocation size={18} color="var(--color-amber-800)" />
-            <p className="text-gray-600 text-sm">{address}</p>
+            <div className="shrink-0">
+              <GoLocation size={18} color="var(--color-amber-800)" />
+            </div>
+            <p className="text-gray-600 text-sm">
+              {province}, {city}, {address}
+            </p>
           </div>
           <p className="text-gray-700 line-clamp-3">{description}</p>
           <div className="mt-auto flex justify-between items-center">
