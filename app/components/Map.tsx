@@ -4,7 +4,7 @@ import { LuBed, LuBath } from "react-icons/lu";
 
 interface MapPopover {
   title: string;
-  img: string;
+  exteriorImage: string;
   bedrooms: number;
   bathrooms: number;
   city: string;
@@ -47,7 +47,7 @@ export default function Map({
           (
             {
               title,
-              img,
+              exteriorImage,
               bedrooms,
               bathrooms,
               city,
@@ -68,7 +68,7 @@ export default function Map({
                   </h3>
                   <div className="md:grid md:grid-cols-2 gap-4">
                     <img
-                      src={img}
+                      src={exteriorImage}
                       alt="Property popover image"
                       draggable={false}
                       className="max-md:hidden place-self-center w-full h-[calc(max(var(--spacing)*32,100%)-10%)] object-cover rounded-lg"

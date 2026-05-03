@@ -7,7 +7,7 @@ interface PropertyCardProps {
     id: number;
     title: string;
     description: string;
-    img: string;
+    exteriorImage: string;
     province: string;
     city: string;
     address: string;
@@ -22,7 +22,7 @@ export default function PropertyCard({
     id,
     title,
     description,
-    img,
+    exteriorImage,
     province,
     city,
     address,
@@ -41,7 +41,7 @@ export default function PropertyCard({
         hover:shadow-md transition-shadow duration-250"
       >
         <img
-          src={img}
+          src={exteriorImage}
           alt={title}
           draggable="false"
           className="w-full max-h-48 my-auto object-cover rounded-md"

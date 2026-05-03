@@ -31,7 +31,7 @@ export default function Properties() {
   const mapPopovers = propertyData.map(
     ({
       title,
-      img,
+      exteriorImage,
       bedrooms,
       bathrooms,
       city,
@@ -40,7 +40,7 @@ export default function Properties() {
       longitude,
     }) => ({
       title,
-      img,
+      exteriorImage,
       bedrooms,
       bathrooms,
       city,

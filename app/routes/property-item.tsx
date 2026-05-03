@@ -43,7 +43,7 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
     title,
     description,
     longDescription,
-    img,
+    exteriorImage,
     sizes,
     bedrooms,
     bathrooms,
@@ -67,7 +67,7 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
   const mapPopover = [
     {
       title,
-      img,
+      exteriorImage,
       bedrooms,
       bathrooms,
       city,
@@ -82,7 +82,7 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
       {/* Left side */}
       <div className="p-2 md:p-4">
         <img
-          src={img}
+          src={exteriorImage}
           alt={title}
           draggable="false"
           className="property-img-outline w-full h-[35vh] mt-8 shadow-lg rounded-lg"
@@ -109,7 +109,7 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
                   bg-amber-100/24 shadow-md rounded-lg border border-amber-200"
                 >
                   <img
-                    src={userPoster.img}
+                    src={userPoster.profilePicture}
                     alt={userPoster.name}
                     className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover"
                   />
