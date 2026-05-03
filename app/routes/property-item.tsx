@@ -211,20 +211,21 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
         </ClientOnly>
 
         <div className="relative max-md:rounded-lg z-10 bg-amber-100 shadow-over-map">
-          <div className="mt-10 mx-6 mb-4 pt-4 md:pt-2">
+          <div className="mt-10 mx-6 mb-4 pt-4">
             <h3 className="text-lg sm:text-xl font-bold">Location:</h3>
           </div>
-
-          <div className="flex justify-between items-center mx-4 md:mx-6 p-3 bg-amber-50/66 rounded-lg border border-amber-200">
-            <span className="text-amber-800 max-sm:text-sm">{city}</span>
-            <span className="text-amber-600 text-lg sm:text-xl">
-              {province}
-            </span>
+          <div className="block pb-4">
+            <div className="flex justify-between items-center mx-4 md:mx-6 p-3 bg-amber-50/66 rounded-lg border border-amber-200">
+              <span className="text-amber-800 max-sm:text-sm">{city}</span>
+              <span className="text-amber-600 text-lg sm:text-xl">
+                {province}
+              </span>
+            </div>
           </div>
           {sizes && sizes.length > 0 && (
-            <div className="mt-8 md:mt-12 mx-6 mb-4">
+            <div className="mt-4 md:mt-8 mx-6 mb-4">
               <h3 className="mb-2 text-lg sm:text-xl font-bold">Room Sizes:</h3>
-              <div className="flex gap-4 flex-wrap">
+              <div className="flex gap-x-4 gap-y-2 flex-wrap pb-4">
                 {sizes.map((size, idx) => (
                   <span
                     key={idx}
@@ -237,15 +238,15 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
             </div>
           )}
           {nearbyPlaces && Object.keys(nearbyPlaces).length > 0 && (
-            <div className="mt-8 md:mt-12 mx-6 mb-4">
+            <div className="mt-4 md:mt-8 mx-6 mb-4">
               <h3 className="mb-2 text-lg sm:text-xl font-bold">
                 Nearby Places:
               </h3>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-x-4 gap-y-2 pb-4">
                 {Object.entries(nearbyPlaces).map(([place, distance]) => (
                   <div
                     key={place}
-                    className="p-3 mb-4 bg-amber-50/66 rounded-lg border border-amber-200 flex justify-between items-center gap-2"
+                    className="p-3 bg-amber-50/66 rounded-lg border border-amber-200 flex justify-between items-center gap-2"
                   >
                     <span className="capitalize text-amber-800 max-sm:text-sm">
                       {place}
