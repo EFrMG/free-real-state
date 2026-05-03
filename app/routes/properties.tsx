@@ -48,7 +48,7 @@ export default function LogIn() {
         ))}
       </div>
       <div className="bg-amber-100">
-        <ClientOnly fallback={mapFallback}>
+        <ClientOnly>
           {() => (
             <Suspense fallback={mapFallback}>
               <Map marginTop={24} viewportHeight={85} />

@@ -114,7 +114,7 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
       </div>
 
       <div className="md:bg-amber-100">
-        <ClientOnly fallback={mapFallback}>
+        <ClientOnly>
           {() => (
             <Suspense fallback={mapFallback}>
               <Map marginTop={12} viewportHeight={75} />
