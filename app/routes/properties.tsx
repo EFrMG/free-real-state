@@ -29,10 +29,11 @@ export default function LogIn() {
   );
 
   const mapPopovers = propertyData.map(
-    ({ title, img, bedrooms, address, latitude, longitude }) => ({
+    ({ title, img, bedrooms, bathrooms, address, latitude, longitude }) => ({
       title,
       img,
       bedrooms,
+      bathrooms,
       address,
       latitude,
       longitude,
@@ -66,6 +67,7 @@ export default function LogIn() {
                 marginTop={24}
                 viewportHeight={85}
                 zoomLevel={4}
+                scrollable={false}
                 mapPopovers={mapPopovers}
               />
             </Suspense>

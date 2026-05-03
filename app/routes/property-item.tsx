@@ -55,14 +55,17 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
     </div>
   );
 
-  const mapPopover = {
-    title,
-    img,
-    bedrooms,
-    address,
-    latitude,
-    longitude,
-  };
+  const mapPopover = [
+    {
+      title,
+      img,
+      bedrooms,
+      bathrooms,
+      address,
+      latitude,
+      longitude,
+    },
+  ];
 
   return (
     <main className="gen-main">
@@ -130,7 +133,8 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
                 marginTop={12}
                 viewportHeight={75}
                 zoomLevel={9}
-                mapPopovers={[mapPopover]}
+                scrollable={true}
+                mapPopovers={mapPopover}
               />
             </Suspense>
           )}
