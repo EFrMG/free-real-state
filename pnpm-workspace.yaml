@@ -1,2 +1,6 @@
+packages:
+  - "frontend"
+  - "shared"
+  - "backends/*"
 allowBuilds:
   esbuild: true

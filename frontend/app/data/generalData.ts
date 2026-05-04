@@ -1,45 +1,6 @@
-export interface PropertyData {
-  id: number;
-  userId?: number;
-  type: "buy" | "rent";
-  title: string;
-  description: string;
-  longDescription?: string;
-  exteriorImage: string;
-  interiorGallery?: string[];
-  sizes?: number[];
-  bedrooms: number;
-  bathrooms: number;
-  price: number;
-  province: string;
-  city: string;
-  address: string;
-  nearbyPlaces?: Record<string, `${number}m`>;
-  latitude: number;
-  longitude: number;
-}
+// import "../../../types/generalDataTypes.ts";
 
-export interface UserData {
-  id: number;
-  name: string;
-  profilePicture: string;
-}
-
-export interface PostData {
-  id: number;
-  title: string;
-  excerpt: string;
-  content: string;
-  postImage: string;
-  date: string;
-  authorId?: number;
-}
-
-export interface Bookmarks {
-  propertyIds: number[];
-}
-
-export interface Chats {}
+// Some of the frontend code will change once data is fetched in one go, regarding clientLoader
 
 export const propertyData: PropertyData[] = [
   {
@@ -462,21 +423,25 @@ export const propertyData: PropertyData[] = [
 export const userData: UserData[] = [
   {
     id: 1,
+    email: "john@me.com",
     name: "Johnathan Doebanne",
     profilePicture: "/app/assets/images/profile-pictures/man_1.jpeg",
   },
   {
     id: 2,
+    email: "marti@me.com",
     name: "Martina Rossi",
     profilePicture: "/app/assets/images/profile-pictures/woman_1.jpeg",
   },
   {
     id: 3,
+    email: "facu@me.com",
     name: "Facundo Gomez",
     profilePicture: "/app/assets/images/profile-pictures/man_2.jpeg",
   },
   {
     id: 4,
+    email: "sofi@me.com",
     name: "Sofia Martinez",
     profilePicture: "/app/assets/images/profile-pictures/woman_2.jpeg",
   },
@@ -485,6 +450,7 @@ export const userData: UserData[] = [
 export const postData: PostData[] = [
   {
     id: 1,
+    authorId: 1,
     title: "How to choose your first home in Argentina",
     excerpt:
       "Navigating the real estate market in Argentina can be challenging. Here are some tips for first-time buyers.",
@@ -492,10 +458,10 @@ export const postData: PostData[] = [
       "Buying your first home is a significant milestone, especially in a dynamic market like Argentina's. From understanding the difference between 'escritura' and 'boleto de compraventa' to choosing the right neighborhood, there's a lot to consider. We recommend starting with a clear budget, research on local market trends, and finding a trustworthy real estate agent who knows the area well.",
     postImage: "https://picsum.photos/seed/post1/1080/1920",
     date: "2024-05-10",
-    authorId: 1,
   },
   {
     id: 2,
+    authorId: 2,
     title: "The rise of Puerto Madero: A luxury guide",
     excerpt:
       "Explore why Puerto Madero has become the most expensive and exclusive neighborhood in Buenos Aires.",
@@ -503,7 +469,6 @@ export const postData: PostData[] = [
       "Puerto Madero has undergone a radical transformation over the past three decades, evolving from an abandoned port area into a hub of high-end skyscrapers and luxury living. Its unique combination of safety, river views, and proximity to the financial district makes it a top choice for international investors and local executives. Discover the best residential towers and hidden gems in this modern neighborhood.",
     postImage: "https://picsum.photos/seed/post2/1080/1920",
     date: "2024-05-15",
-    authorId: 2,
   },
   {
     id: 3,
@@ -517,6 +482,7 @@ export const postData: PostData[] = [
   },
   {
     id: 4,
+    authorId: 3,
     title: "Living in the Delta: Pros and Cons",
     excerpt:
       "The Tigre Delta offers a unique lifestyle. Is island living right for you?",
@@ -524,10 +490,10 @@ export const postData: PostData[] = [
       "Life in the Paraná Delta is unlike anything else. Accessible only by boat, it offers a level of peace and contact with nature that is hard to find so close to a major city. However, it also comes with challenges, such as dependence on boat transportation, managing your own utilities, and dealing with river tides. We weigh the pros and cons of making the jump to island life.",
     postImage: "https://picsum.photos/seed/post4/1080/1920",
     date: "2024-05-25",
-    authorId: 3,
   },
   {
     id: 5,
+    authorId: 3,
     title: "Traditional vs Modern: Argentinian Architecture",
     excerpt:
       "From colonial estates to brutalist towers, Argentina's architectural landscape is a rich tapestry of styles.",
@@ -535,10 +501,10 @@ export const postData: PostData[] = [
       "Argentina's architecture tells the story of its history. You can find beautiful Spanish colonial houses in the north, French-inspired palaces in Buenos Aires, and cutting-edge contemporary designs in the newer developments. Understanding these styles can help you appreciate the character of different neighborhoods and even inspire your own home renovation projects.",
     postImage: "https://picsum.photos/seed/post5/1080/1920",
     date: "2024-06-01",
-    authorId: 3,
   },
   {
     id: 6,
+    authorId: 2,
     title: "Top 5 neighborhoods for students in Córdoba",
     excerpt:
       "Known as 'La Docta', Córdoba is the student capital of Argentina. Here's where you should live.",
@@ -546,10 +512,10 @@ export const postData: PostData[] = [
       "Córdoba is home to one of the oldest and largest universities in South America, creating a vibrant student culture. Nueva Córdoba is the obvious choice for many, but neighborhoods like General Paz, Alberdi, and even the city center offer great alternatives with different vibes and price points. We breakdown the best areas based on proximity to campus, nightlife, and budget.",
     postImage: "https://picsum.photos/seed/post6/1080/1920",
     date: "2024-06-05",
-    authorId: 2,
   },
   {
     id: 7,
+    authorId: 4,
     title: "The charm of Northern Argentina: Living in Salta and Jujuy",
     excerpt:
       "Experience the colorful mountains and rich traditions of the Northwest.",
@@ -557,6 +523,5 @@ export const postData: PostData[] = [
       "The Argentine Northwest is a land of dramatic landscapes and deep-rooted traditions. Salta, 'La Linda', offers a mix of colonial beauty and modern amenities, while the small towns of Jujuy provide a slower pace of life in the heart of the mountains. Whether you're looking for a vacation home or a permanent relocation, the north offers a unique and soul-enriching experience.",
     postImage: "https://picsum.photos/seed/post7/1080/1920",
     date: "2024-06-10",
-    authorId: 4,
   },
 ];
