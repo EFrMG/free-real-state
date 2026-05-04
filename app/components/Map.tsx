@@ -1,8 +1,10 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { LuBed, LuBath } from "react-icons/lu";
+import { Link } from "react-router";
 
 interface MapPopover {
+  id: number;
   title: string;
   exteriorImage: string;
   bedrooms: number;
@@ -46,6 +48,7 @@ export default function Map({
         {mapPopovers.map(
           (
             {
+              id,
               title,
               exteriorImage,
               bedrooms,
@@ -63,9 +66,11 @@ export default function Map({
             >
               <Popup>
                 <div className="min-w-50">
-                  <h3 className="pb-2 text-base text-center leading-none text-amber-900 font-medium">
-                    {title}
-                  </h3>
+                  <Link to={`/properties/${id}`}>
+                    <h3 className="pb-2 text-base text-center leading-none text-amber-900 font-medium">
+                      {title}
+                    </h3>
+                  </Link>
                   <div className="md:grid md:grid-cols-2 gap-4">
                     <img
                       src={exteriorImage}

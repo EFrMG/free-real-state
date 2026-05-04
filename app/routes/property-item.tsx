@@ -42,6 +42,7 @@ export function meta({}: Route.MetaArgs) {
 export default function PropertyItem({ loaderData }: Route.ComponentProps) {
   const { property, userPoster } = loaderData;
   const {
+    id,
     type,
     title,
     description,
@@ -70,6 +71,7 @@ export default function PropertyItem({ loaderData }: Route.ComponentProps) {
 
   const mapPopover = [
     {
+      id,
       title,
       exteriorImage,
       bedrooms,

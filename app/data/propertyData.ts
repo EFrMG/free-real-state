@@ -105,6 +105,7 @@ export const propertyData: PropertyData[] = [
       "Located in the trendy Pichincha neighborhood, this studio apartment offers breathtaking views of the Paraná River and the Rosario skyline. The space is efficiently designed with high-quality finishes, a modern kitchenette, and a private balcony. Perfect for a single professional or a couple looking to enjoy the best of Rosario's gastronomy and culture.",
     exteriorImage: "/app/assets/images/properties/exterior/property_012.webp",
     interiorGallery: [
+      "/app/assets/images/properties/interior/property_076.webp",
       "/app/assets/images/properties/interior/property_079.webp",
     ],
     bedrooms: 1,
@@ -306,7 +307,7 @@ export const propertyData: PropertyData[] = [
     city: "San Isidro",
     address: "Libertador 14000",
     nearbyPlaces: {
-      train_station: "500m",
+      "train station": "500m",
       river: "1000m",
       school: "300m",
     },
@@ -438,7 +439,6 @@ export const propertyData: PropertyData[] = [
       "/app/assets/images/properties/interior/property_073.webp",
       "/app/assets/images/properties/interior/property_074.webp",
       "/app/assets/images/properties/interior/property_075.webp",
-      "/app/assets/images/properties/interior/property_076.webp",
       "/app/assets/images/properties/interior/property_077.webp",
       "/app/assets/images/properties/interior/property_078.webp",
     ],

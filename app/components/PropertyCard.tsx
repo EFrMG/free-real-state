@@ -36,7 +36,7 @@ export default function PropertyCard({
   return (
     <Link
       to={`/properties/${id}`}
-      className="m-4 block hover:opacity-100 group"
+      className="mx-4 my-8 block hover:opacity-100 group"
     >
       <div
         className="relative flex gap-4 pl-3 pr-4 py-3 rounded-lg shadow-lg inset-shadow-sm

@@ -1,7 +1,7 @@
 import type { Route } from "./+types/properties";
 
 import { lazy, Suspense } from "react";
-import { propertyData } from "~/data/propertyData";
+import { propertyData, type PropertyData } from "~/data/propertyData";
 import FilterInput from "~/components/PropertiesFilterInput";
 import PropertyCard from "~/components/PropertyCard";
 import ClientOnly from "~/components/ClientOnly";
@@ -30,6 +30,7 @@ export default function Properties() {
 
   const mapPopovers = propertyData.map(
     ({
+      id,
       title,
       exteriorImage,
       bedrooms,
@@ -38,7 +39,8 @@ export default function Properties() {
       address,
       latitude,
       longitude,
-    }) => ({
+    }: PropertyData) => ({
+      id,
       title,
       exteriorImage,
       bedrooms,
