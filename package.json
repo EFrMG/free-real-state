@@ -13,6 +13,7 @@
     "start:fe": "pnpm --filter @free-real-estate/frontend run start",
     "preview:fe": "pnpm --filter @free-real-estate/frontend run preview",
     "typecheck:fe": "pnpm --filter @free-real-estate/frontend run typecheck",
+    "dev:be": "pnpm --filter @free-real-estate/node-drizzle run dev",
     "generate:be": "pnpm --filter @free-real-estate/node-drizzle run generate",
     "push:be": "pnpm --filter @free-real-estate/node-drizzle run push",
     "studio:be": "pnpm --filter @free-real-estate/node-drizzle run studio"

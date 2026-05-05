@@ -6,6 +6,7 @@
   "main": "index.ts",
   "type": "module",
   "scripts": {
+    "dev": "tsx watch src/index.ts",
     "generate": "drizzle-kit generate",
     "push": "drizzle-kit push",
     "migrate": "tsx src/db/migrate.ts",
@@ -13,9 +14,11 @@
   },
   "dependencies": {
     "@libsql/client": "^0.17.3",
+    "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2"
   },
   "devDependencies": {
+    "@types/node": "^22.19.17",
     "drizzle-kit": "^0.31.10",
     "tsx": "^4.21.0"
   }
