@@ -14,6 +14,8 @@
     "preview:fe": "pnpm --filter @free-real-estate/frontend run preview",
     "typecheck:fe": "pnpm --filter @free-real-estate/frontend run typecheck",
     "dev:be": "pnpm --filter @free-real-estate/node-drizzle run dev",
+    "build:be": "pnpm --filter @free-real-estate/node-drizzle run build",
+    "start:be": "pnpm --filter @free-real-estate/node-drizzle run start",
     "generate:be": "pnpm --filter @free-real-estate/node-drizzle run generate",
     "push:be": "pnpm --filter @free-real-estate/node-drizzle run push",
     "seed:be": "pnpm --filter @free-real-estate/node-drizzle run seed",
