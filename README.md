@@ -37,8 +37,14 @@ pnpm run dev
 
 This would start both the backend and frontend servers in parallel. Consult the [main package file](./package.json) for more commands to run from the root of the project.
 
----
-
-Previews of the frontend:
+## Previews of the frontend:
 
 <img width="1471" height="1009" alt="homepage" src="https://github.com/user-attachments/assets/04b5289c-dd1b-45b4-b025-50843443a733" />
+
+---
+
+<img width="1453" height="1001" alt="properties" src="https://github.com/user-attachments/assets/71add4db-bcfd-471c-a20f-0fc07905b188" />
+
+---
+
+<img width="1607" height="1164" alt="property-item" src="https://github.com/user-attachments/assets/b3aa01dc-1fb8-48fc-a91d-54605dbfdf2e" />
