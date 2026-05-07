@@ -18,6 +18,7 @@ export async function loader({ params }: Route.LoaderArgs) {
   const { id } = params;
 
   const resProperty = await fetch(`http://localhost:3000/api/properties/${id}`);
+
   if (!resProperty.ok) {
     if (resProperty.status === 404) {
       throw new Response("Property Not Found", { status: 404 });
