@@ -6,8 +6,7 @@ import type {
 
 export type { PropertyData, UserData, PostData };
 
-// Some of the frontend code will change once data is fetched in one go, regarding clientLoader
-// This data would generally mirror generalDataSeed.ts in the backend
+// This data is linked to generalDataSeed.ts in the backend
 
 export const propertyData: PropertyData[] = [
   {
@@ -85,6 +84,7 @@ export const propertyData: PropertyData[] = [
       "/app/assets/images/properties/interior/property_076.webp",
       "/app/assets/images/properties/interior/property_079.webp",
     ],
+    sizes: [50, 75, 40],
     bedrooms: 1,
     bathrooms: 1,
     price: 600,
@@ -108,6 +108,7 @@ export const propertyData: PropertyData[] = [
       "/app/assets/images/properties/interior/property_036.webp",
       "/app/assets/images/properties/interior/property_037.webp",
     ],
+    sizes: [25, 100, 250, 350],
     bedrooms: 5,
     bathrooms: 4,
     price: 1250000,
@@ -137,6 +138,7 @@ export const propertyData: PropertyData[] = [
       "/app/assets/images/properties/interior/property_039.webp",
       "/app/assets/images/properties/interior/property_040.webp",
     ],
+    sizes: [20, 50, 55],
     bedrooms: 3,
     bathrooms: 2,
     price: 1500,
@@ -225,6 +227,7 @@ export const propertyData: PropertyData[] = [
     longDescription:
       "Experience life in Ushuaia from this modern and well-heated apartment. The large living room windows offer an unobstructed view of the Beagle Channel and the surrounding snow-capped peaks. Featuring two bedrooms, a modern bathroom, and a fully equipped kitchen, it's an ideal base for adventurers looking to explore Tierra del Fuego National Park or take a boat trip to see the penguins. High-speed internet included, perfect for digital nomads.",
     exteriorImage: "/app/assets/images/properties/exterior/property_011.webp",
+    sizes: [55, 65, 80, 90],
     bedrooms: 2,
     bathrooms: 1,
     price: 1100,
@@ -284,6 +287,7 @@ export const propertyData: PropertyData[] = [
       "/app/assets/images/properties/interior/property_056.webp",
       "/app/assets/images/properties/interior/property_057.webp",
     ],
+    sizes: [25, 25, 100, 150, 200],
     bedrooms: 4,
     bathrooms: 3,
     price: 890000,
@@ -338,6 +342,7 @@ export const propertyData: PropertyData[] = [
     longDescription:
       "This unique property in Purmamarca offers an authentic experience in the Argentine Northwest. Built using traditional adobe and cactus wood, it harmonizes perfectly with the surrounding Seven-Colored Hill. The rooms are decorated with local handicrafts and offer all modern amenities. Guests can enjoy a traditional breakfast on the patio while taking in the breathtaking colors of the mountains. A magical place where time seems to stand still.",
     exteriorImage: "/app/assets/images/properties/exterior/property_026.webp",
+    sizes: [75, 75, 80],
     bedrooms: 1,
     bathrooms: 1,
     price: 750,
@@ -397,6 +402,7 @@ export const propertyData: PropertyData[] = [
       "/app/assets/images/properties/interior/property_069.webp",
       "/app/assets/images/properties/interior/property_070.webp",
     ],
+    sizes: [70, 90, 100, 110],
     bedrooms: 2,
     bathrooms: 1,
     price: 800,
