@@ -50,6 +50,10 @@
     @apply grid md:grid-cols-[60%_40%] max-w-7xl w-full mx-auto max-xs:p-2 max-sm:p-4 max-md:p-6 z-5 grow;
   }
 
+  .gen-left {
+    @apply my-auto md:mr-[18.5%] md:pl-6;
+  }
+
   .filter-input-group {
     @apply stack-0 justify-around px-1 rounded-lg shadow-md shadow-slate-100 border-2 border-amber-500;
   }

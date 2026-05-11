@@ -16,7 +16,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Contact() {
   return (
     <main className="gen-main">
-      <div></div>
+      <div className="gen-left"></div>
       <HeroRightSide />
     </main>
   );

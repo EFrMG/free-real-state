@@ -31,7 +31,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
   return (
     <main className="gen-main">
       {/* Left side */}
-      <div className="relative my-auto md:mr-[18.5%] md:pl-6">
+      <div className="gen-left">
         <h1 className="text-3xl sm:text-5xl md:text-4xl lg:text-5xl">
           Find the place of your dreams at unmatched discounts
         </h1>
