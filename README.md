@@ -56,13 +56,13 @@ graph TD
     style SH fill:#1f1f1f,stroke:#202036,stroke-width:2px
 
     %% Lighter Node
-    style UI fill:#3f3f3f,stroke:#909090
-    style Components fill:#3f3f3f,stroke:#909090
-    style API fill:#3f3f3f,stroke:#909090
-    style ORM fill:#3f3f3f,stroke:#909090
-    style Schema fill:#3f3f3f,stroke:#909090
-    style Types fill:#3f3f3f,stroke:#909090
-    style DB fill:#3f3f3f,stroke:#909090
+    style UI fill:#3f3f3f,stroke:#909090,color:#f5f5f5
+    style Components fill:#3f3f3f,stroke:#909090,color:#f5f5f5
+    style API fill:#3f3f3f,stroke:#909090,color:#f5f5f5
+    style ORM fill:#3f3f3f,stroke:#909090,color:#f5f5f5
+    style Schema fill:#3f3f3f,stroke:#909090,color:#f5f5f5
+    style Types fill:#3f3f3f,stroke:#909090,color:#f5f5f5
+    style DB fill:#3f3f3f,stroke:#909090,color:#f5f5f5
 ```
 
 The main parts of this monorepo are as follows (dependencies and their web links are listed in their respective README documents):
@@ -112,10 +112,23 @@ RESTful API built with `Hono`, using `Drizzle` ORM.
 The runtime is `Node.js` via `@hono/node-server`.
 
 - **Endpoints**:
-  - `GET /api/properties`: Supports advanced filtering (price, type, location, etcetera).
-  - `GET /api/properties/:id`: Detailed view of a single listing.
-  - `GET /api/cities`: Utility to fetch unique cities for search suggestions on user inputs.
-  - `GET /api/users` & `GET /api/posts`: Generic resource fetching.
+  - _Properties_:
+    - `GET /api/properties`: Supports filtering (price, type, location, etcetera).
+    - `GET /api/properties/:id`: View of a single listing.
+    - `GET /api/cities`: Gets unique cities for search suggestions on user inputs.
+  - _Authentication_:
+    - `POST /api/auth/register`: User registration.
+    - `POST /api/auth/login`: User login (sets session cookie).
+    - `POST /api/auth/logout`: User logout (clears session cookie).
+    - `GET /api/auth/me`: Retrieves currently authenticated user session.
+  - _Users & Bookmarks_:
+    - `GET /api/users`: Gets list of agents.
+    - `GET /api/users/:id`: Gets profile details of a specific user.
+    - `GET /api/users/:id/bookmarks`: Gets a user's bookmarked properties.
+    - `POST /api/users/:id/bookmarks`: Saves a property to a user's bookmarks.
+    - `DELETE /api/users/:id/bookmarks/:propertyId`: Removes a property from a user's bookmarks.
+  - _Posts_:
+    - `GET /api/posts`: Generic blog wall or news entry fetching.
 
 ##### 1.2.1.1 Core Database Entities
 
@@ -153,6 +166,6 @@ pnpm push:be && pnpm seed:be && pnpm run dev
 
 ## 3. Future Considerations
 
-- **Authentication**: Implementation of it.
-- **Image Hosting**: Transitioning from local assets to a CDN or cloud storage for the sake of integrating it.
+- **Messaging System**: Implementation of real-time or persistent chat functionality between users and agents.
+- **Image Hosting**: Transitioning from local assets to a CDN or cloud storage (this could be useful in cases where projects need to scale).
 - **Backend Diversification**: Implementing the same API specifications in Go to compare performance and developer experience could be very interesting from a certain perspective.
